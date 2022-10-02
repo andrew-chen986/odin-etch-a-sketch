@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: Roboto;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    flex: 1;
+}
+
+.col {
+    flex: 1;
+    border: 1px solid black;
+}
