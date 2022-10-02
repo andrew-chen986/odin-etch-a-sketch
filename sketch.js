@@ -1,3 +1,8 @@
+// detect when mouse is being held down
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 // button allows user to pick grid size
 // default will be 100x100
 let rows = 100;
@@ -56,7 +61,9 @@ function makeGrid(rows, cols) {
     const gridSquares = document.querySelectorAll('.col');
     gridSquares.forEach(gridSquare => {
         gridSquare.addEventListener('mouseover', () => {
-            gridSquare.classList.add('hovered')
+            if (mouseDown) {
+                gridSquare.classList.add('hovered');
+            }
         });
     });
 
