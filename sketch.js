@@ -3,8 +3,8 @@
 let rows = 100;
 let cols = 100;
 
-button = document.querySelector('button');
-button.addEventListener('click', () => {
+gridResize = document.querySelector('#grid-size');
+gridResize.addEventListener('click', () => {
     let x, y;
     x = prompt("Numbers of rows?");
     x = parseInt(x);
@@ -20,6 +20,11 @@ button.addEventListener('click', () => {
     else {
         alert("Rows and cols must be an integer between 0 and 100!");
     }
+});
+
+reset = document.querySelector('#reset');
+reset.addEventListener('click', () => {
+    makeGrid(rows, cols);
 });
 
 function makeGrid(rows, cols) {

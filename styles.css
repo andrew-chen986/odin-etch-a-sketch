@@ -9,9 +9,14 @@ button {
     border-radius: 5px;
 }
 
+#header {
+    text-align: center;
+}
+
 #container {
     display: flex;
     justify-content: space-between;
+    border: 1px solid black;
 }
 
 .row {
@@ -20,7 +25,6 @@ button {
 
 .col {
     flex: 1;
-    border: 1px solid black;
     padding-bottom: 100%;
 }
 
